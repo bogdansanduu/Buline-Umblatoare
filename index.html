@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buline Umblatoare</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="row">
+    <a href="#" class="circle idle" id="circle-1-of-3" onclick="toggleGreen()"></a>
+    <a href="#" class="circle idle" id="circle-2-of-3" onclick="toggleRed()"></a>
+    <a href="#" class="circle idle" id="circle-3-of-3" onclick="togglePurple()"></a>
+</div>
+
+<script>
+    let toggleGB = true;
+    let buttonGreen = document.getElementById('circle-1-of-3');
+    let buttonRed = document.getElementById('circle-2-of-3');
+    let buttonPurple = document.getElementById('circle-3-of-3');
+
+    function toggleGreen() {
+        if (toggleGB) {
+            buttonGreen.className = 'circle first-state';
+        } else {
+            buttonGreen.className = 'circle second-state';
+        }
+        toggleGB = !toggleGB;
+    }
+
+    function toggleRed() {
+        buttonRed.className = 'circle start-red';
+        setTimeout(function () {
+            buttonRed.className = 'circle idle'
+        }, 11000);
+    }
+
+    function togglePurple() {
+        buttonPurple.className = 'circle start-purple';
+        setTimeout(function () {
+            buttonPurple.className = 'circle idle'
+        }, 5000);
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+@keyframes moveGreen1 {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    33% {
+        transform: translateY(92vh);
+    }
+
+    66% {
+        transform: translateY(92vh);
+    }
+
+    100% {
+        transform: translateY(92vh) translateX(95vw);
+    }
+}
+
+@keyframes moveGreen2 {
+    0% {
+        transform: translateY(92vh) translateX(95vw);
+    }
+
+    33% {
+        transform: translateY(92vh);
+    }
+
+    66% {
+        transform: translateY(92vh);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes moveRed {
+    0% {
+        transform: translateY(0);
+    }
+
+    9% {
+        transform: translateY(92vh);
+    }
+
+    18% {
+        transform: translateY(92vh)
+    }
+
+    27% {
+        transform: translateY(92vh) translateX(-47vw);
+    }
+
+    36% {
+        transform: translateY(92vh) translateX(-47vw);
+
+    }
+
+    45% {
+        transform: translateY(92vh);
+    }
+
+    54% {
+        transform: translateY(92vh);
+    }
+
+    63% {
+        transform: translateY(92vh) translateX(47vw);
+    }
+
+    72% {
+        transform: translateY(92vh) translateX(47vw);
+    }
+
+    81% {
+        transform: translateY(92vh);
+    }
+
+    90% {
+        transform: translateY(92vh);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes movePurple {
+    0% {
+        transform: translateY(0);
+    }
+
+    20% {
+        transform: translateY(92vh);
+    }
+
+    40% {
+        transform: translateY(92vh);
+    }
+
+    60% {
+        transform: translateY(92vh) translateX(-95vw);
+    }
+
+    80% {
+        transform: translateY(92vh) translateX(-95vw);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    padding: 5px;
+}
+
+.row {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.circle {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+}
+
+.circle:hover {
+    transform: translateY(-0.5rem);
+
+}
+
+#circle-1-of-3 {
+    background-color: green;
+    float: left;
+}
+
+.first-state {
+    animation-name: moveGreen1;
+    animation-fill-mode: forwards;
+    animation-duration: 3s;
+}
+
+.second-state {
+    animation-name: moveGreen2;
+    animation-fill-mode: forwards;
+    animation-duration: 3s;
+}
+
+#circle-2-of-3 {
+    background-color: red;
+    margin: 0 auto;
+}
+
+.start-red {
+    animation-name: moveRed;
+    animation-duration: 11s;
+}
+
+#circle-3-of-3 {
+    background-color: purple;
+    float: right;
+}
+
+.start-purple {
+    animation-name: movePurple;
+    animation-duration: 5s;
+}
